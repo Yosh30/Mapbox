@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 92vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -3;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    overflow-x: hidden;
+
+}
+
+nav {
+    display: flex;
+    background-color: rgb(24, 24, 143);
+    justify-content: space-around;
+    padding: 20px 0;
+    color: white;
+    height: 10px;
+    align-items: center;
+}
+
+nav .algo {
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width:  40%;
+    justify-content: space-between;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+
+}
+
+nav ul li a:hover {
+    color: black;
+}
+/*  form direction */
+.direction {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px;
+    width: 25%;
+    padding: 0.1em;
+    opacity: 0.9;
+
+}
+
+.direction input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 1em 1em 1em 0;
+    border-radius: 6px;
+    
+}
+
+.direction input[type="text"]:focus {
+    border-bottom: 1px solid #3998b3;
+    outline: none;
+}
+
+.btn-dir {
+    margin: 10px;
+    border: 1px;
+    width: 25%;
+    padding: 0.1em;
+    opacity: 0.9;
+    
+}
+
+.btn-sub {
+    color: rgb(24, 24, 143);
+}
+
+
+/* hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity :0;
+    left :-6px;
+    top: -2.5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+/* hamburger menu animasi */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0 ;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: wheat;
+    transform : rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: wheat;
+    transform : rotate(-45deg) translate(-0.5px,0);
+}
+
+
+/* responsive */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+
+    /*  form direction */
+    .direction {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        border: 1px;
+        width: 60%;
+        padding: 1em;
+    
+    }
+
+    .direction input[type="text"] {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 1em 1em 1em 0;
+        border-radius: 6px;
+        
+    }
+
+    .direction input[type="text"]:focus {
+        border-bottom: 1px solid #3998b3;
+        outline: none;
+    }
+
+
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        top: 0;
+        height: 100vh;
+        background-color: rgba(24, 24, 143, 0.548);
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 0;
+        width: 40%;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    /*  form direction */
+    .direction {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        border: 1px;
+        width: 60%;
+        padding: 1em;
+    
+    }
+
+    .direction input[type="text"] {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 1em 1em 1em 0;
+        border-radius: 6px;
+        
+    }
+
+    .direction input[type="text"]:focus {
+        border-bottom: 1px solid #3998b3;
+        outline: none;
+    }
+
+    
+
+   
+
+}
