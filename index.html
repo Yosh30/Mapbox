@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+    
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <title>Algoritma Astar</title>
+</head>
+<body>
+
+    <nav>
+        <div class="algo">
+        <h4>Algoritma Astar</h4>
+        </div>
+
+        <ul>
+            <li>Data</li>
+            <li>about</li>
+        </ul>
+    
+     <div class="menu-toggle">
+         <input type="checkbox">
+         <span></span>
+         <span></span>
+         <span></span>
+     </div>
+        
+    </nav>
+    
+    <div id="map"> </div>
+
+    <div class="direction">
+        <input type="text" name="lokasi-awal" placeholder="Lokasi Awal">
+        <input type="text" name="lokasi-akhir" placeholder="Lokasi Tujuan"> 
+    
+        
+        <div class="btn-dir">
+            <button class="btn-sub" type="submit"> Cari Rute</button>
+        </div>
+            
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
